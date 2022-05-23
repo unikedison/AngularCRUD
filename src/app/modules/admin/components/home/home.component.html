@@ -1,0 +1,32 @@
+<div class="container-fluid pt-3 pb-3">
+    <table class="table border table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Job</th>
+                <th scope="col">Address</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of displayDetails">
+                <th scope="row">{{emp.id}}</th>
+                <td>{{emp.name}}</td>
+                <td>{{emp.email}}</td>
+                <td>{{emp.phone}}</td>
+                <td>{{emp.job}}</td>
+                <td>{{emp.address}}</td>
+                <td><i [routerLink]="['/admin/employee',emp.id]" class='fa fa-edit'></i></td>
+                <td><i (click)="DeleteEmployee(emp.id)" class='fa fa-trash'></i></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-center pagination">
+        <a class="ml-2" (click)="GetData(-10)" *ngIf="current>0">&#60;</a>
+        <a class="ml-2" (click)="GetData(10)" *ngIf="current<pageLength">&#62;</a>
+    </div>
+</div>

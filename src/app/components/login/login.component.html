@@ -1,0 +1,40 @@
+<!-- <div class="container d-flex flex-column">
+    <h2>Login Form</h2>
+
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="imgcontainer">
+            <img src="https://www.pinclipart.com/picdir/big/565-5657886_avatar-images-for-login-form-clipart.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" formControlName="email">
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" formControlName="password">
+
+            <button type="submit">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+
+        <!-- <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a routerLink="/forgot-password">password?</a></span>
+        </div> -->
+<!-- </form>
+</div> -->
+
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+
+    <div class="container d-flex flex-column mt-5 justify-content-center">
+        <img class="img-fluid mx-auto" src="https://www.pngmart.com/files/21/Admin-Profile-Vector-PNG-Clipart.png" alt="">
+        <label class="font-weight-bold mt-2" for="email">Email</label>
+        <input type="text" placeholder="Enter Email" name="email" formControlName="email">
+        <label class="font-weight-bold mt-2" for="password">Password</label>
+        <input type="password" name="password" placeholder="Enter Password" formControlName="password">
+        <button class="mt-4 btn btn-success">Login</button>
+    </div>
+
+</form>

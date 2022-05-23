@@ -1,0 +1,30 @@
+<div class="container">
+    <form [formGroup]="employeeForm" (ngSubmit)="updateEmployee()">
+        <div class="row">
+            <div class="col-lg-6">
+                <label for="name">Name</label>
+                <input type="text" formControlName="name" class="form-control">
+            </div>
+            <div class="col-lg-6">
+                <label for="email">E-Mail</label>
+                <input type="text" formControlName="email" [disabled]="true" class="form-control">
+            </div>
+            <div class="col-lg-6">
+                <label for="phone">Phone</label>
+                <input type="text" formControlName="phone" class="form-control">
+            </div>
+            <div class="col-lg-6">
+                <label for="job">Job</label>
+                <input type="text" formControlName="job" class="form-control">
+            </div>
+            <div class="col-lg-6">
+                <label for="address">Address</label>
+                <input type="text" formControlName="address" class="form-control">
+            </div>
+            <div class="col-lg-6 mt-3">
+                <button type="submit" class="btn btn-sm btn-success mt-3" (click)="updateEmployee()">Update</button>
+                <button type="button" class="btn btn-sm btn-warning mt-3 ml-3" routerLink="/admin">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>
