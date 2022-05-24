@@ -1,4 +1,5 @@
-<div class="container-fluid pt-3 pb-3">
+<div class="container-fluid pb-5">
+    <button [routerLink]="['/admin/create-employee']" class="btn btn-primary mb-2">Add Employee</button>
     <table class="table border table-striped">
         <thead>
             <tr>
@@ -20,7 +21,7 @@
                 <td>{{emp.phone}}</td>
                 <td>{{emp.job}}</td>
                 <td>{{emp.address}}</td>
-                <td><i [routerLink]="['/admin/employee',emp.id]" class='fa fa-edit'></i></td>
+                <td><i [routerLink]="['/admin/update-employee',emp.id]" class='fa fa-edit'></i></td>
                 <td><i (click)="DeleteEmployee(emp.id)" class='fa fa-trash'></i></td>
             </tr>
         </tbody>

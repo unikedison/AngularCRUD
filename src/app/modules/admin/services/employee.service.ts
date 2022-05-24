@@ -11,6 +11,10 @@ export class EmployeeService {
 
   constructor(private httpClient: HttpClient) { }
 
+  CreateEmployee(data:Employee){
+    return this.httpClient.post(`${environment.api_base_url}employeeDetails`,data)
+  }
+
   GetEmployeeDetails() {
     return this.httpClient.get<Employee[]>(`${environment.api_base_url}employeeDetails`)
   }
@@ -19,7 +23,7 @@ export class EmployeeService {
     return this.httpClient.get<Employee>(`${environment.api_base_url}employeeDetails/${id}`)
   }
 
-  UpdateEmployee(id: number, data:any) {
+  UpdateEmployee(id: number, data:Employee) {
     return this.httpClient.put(`${environment.api_base_url}employeeDetails/${id}`,data)
   }
 

@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { UpdateEmployeeComponent } from './components/update-employee/update-employee.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CreateEmployeeComponent } from './components/create-employee/create-employee.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    UpdateEmployeeComponent
+    UpdateEmployeeComponent,
+    CreateEmployeeComponent
   ],
   imports: [
     CommonModule,
